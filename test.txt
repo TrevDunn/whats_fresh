@@ -1,0 +1,1 @@
+This is a test of Atom's ability to outline in green if not committed to git.
