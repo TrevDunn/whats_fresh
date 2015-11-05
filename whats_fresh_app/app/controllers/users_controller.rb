@@ -1,6 +1,6 @@
-class UsersController < ApplicationController::Base
+class UsersController < ApplicationController
 	def index
-		@users = Users.all
+		@users = User.all
 	end
 	def show
 		@user = User.find(params[:id])
@@ -25,8 +25,8 @@ class UsersController < ApplicationController::Base
 		if user.update(user_params)
 			redirect_to ('/user')
 		else
-			redirect_to 
-
+			redirect_to
+		end
 	end
 	def destroy
 

@@ -10,9 +10,9 @@ Rails.application.routes.draw do
 		resources :stalls
 	end
 
-	get '/login' => 'session#new'
-	post '/login' => 'session#create'
-	get '/logout' => 'session#destroy'
+	get '/login' => 'sessions#new'
+	post '/login' => 'sessions#create'
+	get '/logout' => 'sessions#destroy'
 
 
 

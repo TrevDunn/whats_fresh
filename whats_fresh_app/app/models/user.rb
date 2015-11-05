@@ -1,4 +1,4 @@
-class User < ActiveRecord
+class User < ActiveRecord::Base
 	# has_many :favorites
 	has_secure_password
 	validates :email, presence: true
