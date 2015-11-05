@@ -11,7 +11,7 @@
 
 
 <% if current_user %>
-	Signed in as <%= current_user.name %> | <%= link_to 'logout', 'users/new' %>
+	Signed in as <%= current_user.name %> | <%= link_to 'logout', '/logout' %>
 <% else %>
 	<%= link_to 'login', '/login' %> || <%= link_to 'signup', 'users/new' %>
 <% end %>
