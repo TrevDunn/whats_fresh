@@ -29,7 +29,9 @@ class UsersController < ApplicationController
 		end
 	end
 	def destroy
-
+		@user = User.find(params[:id])
+		@user.destroy
+		redirect_to '/login'
 	end
 	private
 	def user_params
@@ -42,7 +44,4 @@ class UsersController < ApplicationController
 		:password_confirmation
 		)
 	end
-
-
-
 end

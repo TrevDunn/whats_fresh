@@ -1,13 +1,13 @@
 Rails.application.routes.draw do
 
-	resources :users
-
-	resources :farmers do
-		resources :stalls
+	resources :users do
+		resources :favorites
 	end
 
 	resources :markets do
-		resources :stalls
+		resources :farmers do
+			resources :items
+		end
 	end
 
 	get '/login' => 'sessions#new'
