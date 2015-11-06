@@ -5,3 +5,27 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+Market.destroy_all
+Farmer.destroy_all
+
+a = Tweed.create(content: 'This is definitely not confusing.')
+a.comments << Comment.create(content: 'Agreed.')
+
+a = Market.create(name: 'Union Square GreenMarket', location: 'New York, NY', website: 'http://www.grownyc.org/greenmarket/manhattan-union-square-m', )
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#
