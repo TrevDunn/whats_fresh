@@ -1,10 +1,10 @@
 class FavoritesController < ApplicationController
 	def index
-		@user = User.find(params[:id])
+		@user = User.find(params[:user_id])
 	end
-	def new
-		@favorite = Favorite.new
-	end
+	# def new		#May not be necessary?
+	# 	@favorite = Favorite.new
+	# end
 	def create
 		favorite = Favorite.new
 		favorite.save
