@@ -6,14 +6,13 @@ class FavoritesController < ApplicationController
 		@favorite = Favorite.new
 	end
 	def create
-		favorite = Favorite.new(favorite_params)
-		if favorite.save
-			redirect_to ('/user/')
-		else
-			redirect_to ('/users/new')
-		end
+		favorite = Favorite.new
+		favorite.save
+		redirect_to user_favorites_path
 	end
 	def destroy
-
+		@favorite = favorite.find(params[:id])
+		@favorite.destroy
+		redirect_to user_favorites_path
 	end
 end

@@ -11,10 +11,49 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151105183507) do
+ActiveRecord::Schema.define(version: 20151106160409) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "farmers", force: :cascade do |t|
+    t.string   "name"
+    t.string   "email"
+    t.string   "website"
+    t.integer  "market_id"
+    t.text     "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "favorites", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "favorable_id"
+    t.string   "favorable_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "favorites", ["user_id", "favorable_id", "favorable_type"], name: "index_favorites_on_user_id_and_favorable_id_and_favorable_type", unique: true, using: :btree
+
+  create_table "items", force: :cascade do |t|
+    t.string   "name"
+    t.integer  "farmer_id"
+    t.string   "in_stock"
+    t.string   "photo"
+    t.string   "description"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "markets", force: :cascade do |t|
+    t.string   "name"
+    t.string   "location"
+    t.string   "website"
+    t.string   "hours"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
