@@ -1,4 +1,7 @@
 class MarketsController < ApplicationController
+
+  before_action :authorize, except: [:index]
+
 	def index
 		@markets = Market.all
 	end

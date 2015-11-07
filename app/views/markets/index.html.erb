@@ -1,7 +1,7 @@
 <ul>
-	<% @markets.each do |market| %>
+	<% @markets.each do |mrkt| %>
 		<li>
-			<%= market.name %>
+			<%= link_to "#{mrkt.name}", market_path(mrkt.id) %>
 		</li>
 	<% end %>
 </ul>

@@ -8,3 +8,12 @@
 <p>
 	<%= @market.description %>
 </p>
+
+<div>
+	<p>
+		Are you a vendor at this market?
+		<%= link_to "Create your own What's Fresh Page here!", new_market_farmer_path(@market.id)%>
+	</p>
+
+
+</div>
