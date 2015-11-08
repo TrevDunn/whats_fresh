@@ -4,7 +4,7 @@
 <h3>Edit Your Account</h3>
 	<%= render 'form' %>
 
-<%= link_to 'Delete your Account', '/logout',
+<%= link_to 'Delete your Account', user_path,
 method: :delete,
 data: {confirm: 'Are you sure?!?!'} %>
 <%= link_to 'Back', markets_path %>

@@ -45,6 +45,7 @@ class FarmersController < ApplicationController
 		:description,
 		:user_match,
 		:market_id
+		:user_match
 		)
 	end
 end

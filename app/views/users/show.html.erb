@@ -1,11 +1,20 @@
-<p>
-	Username
-	<%= @user.name %>
-</p>
-<p>
-	Email:
-	<%= @user.email %>
-</p>
+<% if current_user.id == @user.id %>
+<h2>User Information </h2>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<div class="info-box">
+<strong> User Name: </strong>
+<%= @user.name %>
+<br/>
+<strong>Email:</strong>
+<%= @user.email %>
+</div>
+<div class="nav-bot">
+<%= link_to 'Edit Profile', edit_user_path(@user) %> |
+<%= link_to 'Back', markets_path %>
+</div>
+<% else %>
+	<%= render 'deny'%>
+	<div class="nav-bot">
+		<%= link_to 'Back', markets_path%>
+	</div>
+<% end %>

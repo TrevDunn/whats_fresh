@@ -26,7 +26,7 @@ class UsersController < ApplicationController
 		id = params[:id]
 		user = User.find(id)
 		if user.update(user_params)
-			redirect_to ('/user')
+			redirect_to user_path(user)
 		else
 			redirect_to
 		end
@@ -34,6 +34,7 @@ class UsersController < ApplicationController
 	def destroy
 		@user = User.find(params[:id])
 		@user.destroy
+		session[:user_id] = nil
 		redirect_to '/login'
 	end
 	private
@@ -44,7 +45,8 @@ class UsersController < ApplicationController
 		:photo,
 		# :location, (??)
 		:password,
-		:password_confirmation
+		:password_confirmation,
+		:farmer_access
 		)
 	end
 end
