@@ -1,19 +1,48 @@
-<h2> <%= @market.name %> </h2>
-
-<div>
+<div class="info-bar">
+<ul>
+	<li>
 <%= @market.location %>
-<%= @market.website %>
+	</li>
+	<li>
 <%= @market.hours %>
+	</li>
+	<li>
+<%= @market.website %>
+	</li>
+</ul>
 </div>
+<div class="main-section">
+<h2> <%= @market.name %> </h2>
 <p>
 	<%= @market.description %>
 </p>
 
-<div>
+<div class="main-list">
+	<% @market.farmer.each do |frmr| %>
+	<h3><%= frmr.name %></h3>
+	<div class="info-list">
+		<ul>
+			<li>
+				<%= frmr.email %>
+			</li>
+			<li>
+				<%= frmr.website %>
+			</li>
+		</ul>
+	</div>
 	<p>
-		Are you a vendor at this market?
-		<%= link_to "Create your own What's Fresh Page here!", new_market_farmer_path(@market.id)%>
+		<%= frmr.description%>
 	</p>
+	<% end %>
+</div>
 
 
+
+
+	<div class="bottom-text">
+		<p>
+			Are you a vendor at this market?<br/>
+			<%= link_to "Create your own What's Fresh Page here!", new_market_farmer_path(@market.id)%>
+		</p>
+	</div>
 </div>

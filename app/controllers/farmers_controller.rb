@@ -12,17 +12,18 @@ class FarmersController < ApplicationController
 		@farmer = Farmer.find(params[:id])
 	end
 	def create
-		farmer = Farmer.new(farmer_params)
-		if farmer.save
-			redirect_to market_path(market_id)
+		@farmer = Farmer.new(farmer_params)
+		@farmer.market_id = params[:market_id]
+		if @farmer.save
+			redirect_to market_path(@farmer.market)
 		else
-			redirect_to new_market_farmer_path(market_id)
+			redirect_to users_path
 		end
 	end
 	def update
 		id = params[:id]
 		farmer = Farmer.find(id)
-		if farmer.update(user_params)
+		if farmer.update(farmer_params)
 			redirect_to edit_market_farmer_path(market_id)
 		else
 			redirect_to edit_market_farmer_path(market_id)
@@ -36,15 +37,15 @@ class FarmersController < ApplicationController
 	private
 
 	# Attempt to link strong params to user instead of farmer,
-		# As farmer is an object without sessions
+	# 	As farmer is an object without sessions
 	def farmer_params
-		params.require(:user).permit(
+		params.require(:farmer).permit(
 		:name,
 		:email,
 		:website,
 		:description,
 		:user_match,
-		:market_id
+		:market_id,
 		:user_match
 		)
 	end
