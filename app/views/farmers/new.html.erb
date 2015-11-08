@@ -1,7 +1,12 @@
 <h2>Make a new Farmer Page</h2>
 
-<% if current_user.id == @farmer.user_match %>
+<% if current_user.farmer_access == true %>
 	<%= render 'form' %>
+<% else %>
+	<p>
+		You need to be a Farmer to have a Farmer page. Contact the admin for access.
+	</p>
+<% end %>
 
 
 <%= link_to 'Back', markets_path %>

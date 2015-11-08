@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-# User.destroy_all
+User.destroy_all
 Market.destroy_all
 Farmer.destroy_all
 # Item.destroy_all
@@ -45,8 +45,6 @@ c = Market.create(name: 'Friends of Elon Community Church Farmers Market', locat
 # c.farmers << h
 # c.farmers << i
 
-y = User.create(name: 'Joey Admin', email: 'admin@aol.com', farmer_access: true)
-z = User.create(name: 'Paula', email: 'paula@aol.com')
 
 
 

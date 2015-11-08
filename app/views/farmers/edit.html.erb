@@ -1,0 +1,14 @@
+<h2>Edit Your Farmer Page</h2>
+
+<% if current_user.farmer_access == true && if current_user.id == @farmer.user_match %>
+	<%= render 'form' %>
+<% else %>
+<p>
+	You need to be a Farmer to have a Farmer page. Contact the admin for access.
+</p>
+<% end %>
+
+<%= link_to 'Delete your Farmer Page', market_farmer_path(farmer),
+method: :delete,
+data: {confirm: 'Are you sure?!?!'} %>
+<%= link_to 'Back', markets_path %>
