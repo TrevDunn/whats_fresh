@@ -1,45 +1,45 @@
 <div class="info-bar">
-<ul>
-	<li>
-<%= @market.location %>
-	</li>
-	<li>
-<%= @market.hours %>
-	</li>
-	<li>
-<%= @market.website %>
-	</li>
-</ul>
+	<p>
+		<%= @market.location %>
+	</p>
+	<p>
+		<%= @market.hours %>
+	</p>
+	<p>
+		<a href="<%= @market.website %>">Visit the Market's website here!</a>
+	</p>
 </div>
 <div class="main-section">
-	<h2> <%= @market.name %> </h2>
-	<p>
+	<div class="main-heading">
+		<h2> <%= @market.name %> </h2>
+	</div>
+	<p class="desc-nap">
 		<%= @market.description %>
 	</p>
 	<div class="main-list">
 		<% @farmer.each do |frmr| %>
 			<% if frmr.market_id == @market.id %>
 			<div class="headshot-links">
-				<img src="<%= frmr.photo %>">
+				<img class="farm-photos" src="<%= frmr.photo %>">
 				<h3><%= link_to "#{frmr.name}", "/markets/#{@market.id}/farmers/#{frmr.id}" %></h3>
-			</div>
 			<div class="farmer-contacts">
+			<p>
+				<%= frmr.small_desc%>
+			</p>
 				<ul>
 					<li>
 						<%= frmr.email %>
 					</li>
 					<li>
-						<%= frmr.website %>
+						<a href="<%= frmr.website %>">Visit their website here!</a><%=  %>
 					</li>
 				</ul>
 			</div>
-			<p>
-				<%= frmr.small_desc%>
-			</p>
-			<% end %>
+		</div>
 		<% end %>
+	<% end %>
 	</div>
-	<div class="bottom-text">
+	<div class="desc-nap">
 		<p>
 			Are you a vendor at this market?<br/>
 			<%= link_to "Create your own What's Fresh Page here!", new_market_farmer_path(@market.id)%>

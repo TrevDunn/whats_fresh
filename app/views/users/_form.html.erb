@@ -1,16 +1,24 @@
 <%= form_for(@user) do |f| %>
-	<p>
-	Name: <%= f.text_field :name %>
-	</p>
-	<p>
-	Email: <%= f.text_field :email %>
-	</p>
-	<p>
-	Password: <%= f.password_field :password %>
-	<br/>
-	Password Confirmation: <%= f.password_field :password_confirmation %>
-	</p>
-	Are you a farmer? <%= f.check_box :farmer_access %>
-	<br/>
-	<%= f.submit "Submit"%>
+	<div class="login-div">
+	<ul>
+		<li>
+			Name: <%= f.text_field :name %>
+		</li>
+		<li>
+			Email: <%= f.text_field :email %>
+		</li>
+		<li>
+			Photo (url) <%= f.text_field :photo %>
+		</li>
+		<li>
+			Password: <%= f.password_field :password %>
+			<br/>
+			Password Confirmation: <%= f.password_field :password_confirmation %>
+		</li>
+		<li>
+			Are you a Farmer? <%= f.check_box :farmer_access %>
+		</li>
+	</ul>
+	<%= submit_tag "Submit" %>
+	</div>
 <% end %>

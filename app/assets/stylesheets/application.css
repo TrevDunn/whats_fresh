@@ -13,3 +13,156 @@
  *= require_tree .
  *= require_self
  */
+
+body{
+	background: url("http://2.bp.blogspot.com/-3-bkBLwA_Bk/VaTNgW4XoEI/AAAAAAAAE_8/hHO-ZQz83OI/s1600/tile_grass_v01bs.png");
+	font-family: helvetica, arial;
+	overflow: scroll;
+}
+
+
+a{
+	text-decoration: none;
+	color: darkblue;
+}
+
+li{
+	display:block;
+}
+.head-box{
+	border: 5px solid;
+	border-color: rgba(240, 255, 240, 0.7);
+	background: rgba(240, 255, 240, 0.5);
+	padding: 10px;
+	font-size: 18px;
+	max-width: 17%;
+}
+
+.signed-text{
+	font-size: 12px;
+}
+
+.main-section{
+	border: 1px solid black;
+	border-width: 1px 3px 3px 1px;
+	max-width: 60%;
+	margin: 0 auto;
+	background: url("https://appzumbi.com/pd/a5/b/tile-pattern-design-wood-fence-texture-C6Mr.jpg")
+}
+.info-box{
+	border: 5px solid red;
+}
+
+.main-heading{
+	text-align: center;
+	font-size: 34px;
+	margin: 20px;
+}
+
+.main-list{
+	border: 4px solid rgba(255, 197, 130, 1);
+	background: url("http://farm8.static.flickr.com/7145/6603331821_7c2f17dc0c_m.jpg");
+	overflow: hidden;
+}
+
+.headshot-links{
+	border: 5px solid rgba(253, 141, 7, 1);
+	overflow: hidden;
+	font-size: 20px;
+	padding: 10px;
+}
+.market-info{
+	display: inline-block;
+	font-size: 15px;
+}
+#user-box{
+	/*border: 5px solid blue;*/
+}
+
+#farmer-box{
+	/*border: 5px solid green;*/
+}
+
+.nav-bot{
+	border: 0 solid black;
+	border-bottom: 30px;
+	border-right: 3px;
+	background: url("https://appzumbi.com/pd/a5/b/tile-pattern-design-wood-fence-texture-C6Mr.jpg");
+	padding: 8px;
+	font-size: 20px;
+	text-align: center;
+}
+
+.login-div{
+	/*border: 5px solid purple;*/
+	text-align: right;
+	display: inline-block;
+	margin: 0 auto;
+	margin-left: 25%;
+	margin-right: 35%;
+	margin-bottom: 5%;
+	font-size: 22px;
+
+}
+
+.destroy-text{
+	font-size: 20px;
+	text-align: center;
+	border: 2px solid red;
+	background: rgba(255, 0, 0, 0.5);
+	margin: 0 auto;
+	max-width: 25%;
+}
+
+.bottom-text{
+	border: 5px solid yellow;
+}
+
+.info-bar{
+	border: 5px solid pink;
+	border: 5px solid;
+	border-color: rgba(240, 255, 240, 0.7);
+	background: rgba(240, 255, 240, 0.5);
+	padding: 10px;
+	font-size: 16px;
+	max-width: 17%;
+	margin-top: 50px;
+	display: inline-block;
+	text-align: left;
+	position: absolute;
+}
+
+.desc-nap{
+	border: 2px solid rgba(240, 240, 240, 0.8);
+	background: url("http://photos.gograph.com/thumbs/CSP/CSP354/k3540028.jpg");
+	font-size: 18px;
+	max-width: 90%;
+	margin: 10px auto;
+	text-align: center;
+	min-height: 60px;
+}
+
+.farmer-contacts{
+	/*border: 5px solid darkgreen;*/
+	float: inherit;
+	text-align: left;
+	max-width: 75%;
+	position: relative;
+}
+
+.farm-photos{
+	float: right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/**/

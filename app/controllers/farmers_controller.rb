@@ -1,6 +1,7 @@
 class FarmersController < ApplicationController
 	def index
 		@farmers = Farmer.all
+		redirect_to markets_path
 	end
 	def show
 		@market = Market.find(params[:market_id])

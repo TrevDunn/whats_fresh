@@ -1,10 +1,13 @@
-<h2>Make a new Farmer Page</h2>
-
 <% if current_user.farmer_access == true %>
+<div class="main-section">
+	<div class="main-heading">
+		<h2>Make a new Farmer Page</h2>
+	</div>
+
 	<%= render 'form' %>
 <% else %>
 	<p>
-		You need to be a Farmer to have a Farmer page. Contact the admin for access.
+		You need to be a Farmer to have a Farmer page. Contact the admin if you are encountering this message in error.
 	</p>
 <% end %>
 

@@ -14,33 +14,63 @@
 		</ul>
 	</div>
 <% end %>
-<p>
-	<%= f.label :name %><br>
-	<%= f.text_field :name %><br/>
-</p>
-<p>
-	<%= f.label :email %><br>
-	<%= f.text_field :email %><br/>
-</p>
-<p>
-	<%= f.label :website %><br>
-	<%= f.text_field :website %><br/>
-</p>
-<p>
-	<%= f.label :small_desc %>
-	<%= f.text_field :small_desc %>
-</p>
-<p>
-	<%= f.label :photo %>
-	<%= f.text_field :photo %>
-</p>
-<p>
-	<%= f.label :description %>
-	<%= f.text_area :description %>
-</p>
-<p>
-	<%= f.submit "Submit" %>
-</p>
+	<div class="login-div">
+	<ul>
+		<li>
+			<%= f.label :name %><br>
+			<%= f.text_field :name %><br/>
+		</li>
+		<li>
+			<%= f.label :email %><br>
+			<%= f.text_field :email %><br/>
+		</li>
+		<li>
+			<%= f.label :website %><br>
+			<%= f.text_field :website %><br/>
+		</li>
+		<li>
+			<%= f.label :small_desc %>
+			<%= f.text_field :small_desc %>
+		</li>
+		<li>
+			<%= f.label :photo %>
+			<%= f.text_field :photo %>
+		</li>
+		<li>
+			<%= f.label :description %>
+			<%= f.text_area :description %>
+		</li>
+	</ul>
+	<%= submit_tag "Submit" %>
+	</div>
 <% end %>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .

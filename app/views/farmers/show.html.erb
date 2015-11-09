@@ -1,22 +1,30 @@
 <div class="info-bar">
-<ul>
-	<li>
-<%= @market.name %>
-	</li>
-	<li>
-<%= @farmer.email %>
-	</li>
-	<li>
-<%= @farmer.website %>
-	</li>
-</ul>
-</div>
-<img src="<%= @farmer.photo %>"/>
-<div class="main-section">
-	<h2> <%= @farmer.name %> </h2>
 	<p>
-		<%= @market.description %>
+		<%= @market.name %>
 	</p>
+	<p>
+		<%= @farmer.email %>
+	</p>
+	<p>
+		<a href="<%= @farmer.website %>">Visit the Farm's website here!</a>
+	</p>
+</div>
+<div class="main-section">
+	<div class="main-heading">
+		<h2> <%= @farmer.name %> </h2>
+	</div>
+	<p class="desc-nap">
+		<%= @farmer.description %>
+	</p>
+	<div class="main-list">
+		<div class="headshot-links">
+			<img class="farm-photos" src="<%= @farmer.photo %>"/>
+			<h3> <%= @farmer.name %> </h3>
+			<div class="farmer-contacts">
+				<%= @market.description %>
+			</div>
+		</div>
+	</div>
 </div>
 <footer>
 	<div class="nav-bot">

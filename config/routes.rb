@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+	root to: 'markets#index'
+
 	resources :users do
 		resources :favorites
 	end

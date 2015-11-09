@@ -1,13 +1,15 @@
 
 <% if current_user.id == @user.id %>
-<h2>User Settings | Information </h2>
-<h3>Edit Your Account</h3>
+<div class="main-section">
+	<div class="main-heading">
+		<h2> Edit Your Account </h2>
+	</div>
 	<%= render 'form' %>
-
-<%= link_to 'Delete your Account', user_path,
+<div class="destroy-text">
+<%= link_to 'Delete Account', user_path,
 method: :delete,
 data: {confirm: 'Are you sure?!?!'} %>
-<%= link_to 'Back', markets_path %>
+</div>
 <% else %>
 	<%= render 'deny'%>
 <% end %>

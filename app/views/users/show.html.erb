@@ -1,37 +1,42 @@
 <% if current_user.id == @user.id %>
-<h2>User Information </h2>
-
-<div class="info-box" id="user-box">
-	<strong> User Name: </strong>
-	<%= @user.name %>
-	<br/>
-	<strong>Email:</strong>
-	<%= @user.email %>
-	<%= link_to 'Edit Profile', edit_user_path(@user) %> |
-</div>
-<% if @farmer != nil && current_user.id == @farmer.user_id %>
-	<div class="info-box" id="farmer-box">
-		<strong> Farm Page Name: </strong>
-		<%= @farmer.name %>
-		<br/>
-		<strong>Farm Email:</strong>
-		<%= @farmer.email %>
-		<br/>
-		<strong>Farm Email:</strong>
-		<%= @farmer.website %>
-		<%= link_to 'Edit Farm Page', "/markets/#{@farmer.market_id}/farmers/#{@farmer.id}/edit" %> |
+<div class="main-section">
+	<div class="main-heading">
+	<h2>User Information </h2>
 	</div>
-<% end %>
-<footer>
-	<div class="nav-bot">
-		<%= link_to 'Back to the Markets', markets_path %>
+	<div class="main-list">
+		<div class="headshot-links" id="user-box">
+			<strong> User Name: </strong>
+			<%= @user.name %>
+			<br/>
+			<strong>Email:</strong>
+			<%= @user.email %> <br/>
+			<%= link_to 'Edit Profile', edit_user_path(@user) %>
+		</div>
+		<% if @farmer != nil && current_user.id == @farmer.user_id %>
+			<div class="headshot-links" id="farmer-box">
+				<strong> Farm Page Name: </strong>
+				<%= @farmer.name %>
+				<br/>
+				<strong>Farm Email:</strong>
+				<%= @farmer.email %>
+				<br/>
+				<strong>Farm Email:</strong>
+				<%= @farmer.website %> <br/>
+				<%= link_to 'Edit Farm Page', "/markets/#{@farmer.market_id}/farmers/#{@farmer.id}/edit" %>
+			</div>
+		<% end %>
 	</div>
-</footer>
-<% else %>
-	<%= render 'deny'%>
 	<footer>
 		<div class="nav-bot">
 			<%= link_to 'Back to the Markets', markets_path %>
 		</div>
 	</footer>
-<% end %>
+	<% else %>
+		<%= render 'deny'%>
+		<footer>
+			<div class="nav-bot">
+				<%= link_to 'Back to the Markets', markets_path %>
+			</div>
+		</footer>
+	<% end %>
+</div>
