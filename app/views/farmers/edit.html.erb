@@ -11,4 +11,10 @@
 <%= link_to 'Delete your Farmer Page', "/markets/#{@farmer.market_id}/farmers/#{@farmer.id}",
 method: :delete,
 data: {confirm: 'Are you sure?!?!'} %>
-<%= link_to 'Back', markets_path %>
+
+
+<footer>
+	<div class="nav-bot">
+		<%= link_to 'Back to the Markets', markets_path %>
+	</div>
+</footer>

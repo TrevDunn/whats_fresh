@@ -1,6 +1,7 @@
 <ul>
 	<% @markets.each do |mrkt| %>
 		<li>
+			<img src="<%= "#{mrkt.photo}" %>">
 			<%= link_to "#{mrkt.name}", market_path(mrkt.id) %>
 
 				: <%= mrkt.location %>
