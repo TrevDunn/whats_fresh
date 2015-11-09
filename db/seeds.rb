@@ -6,18 +6,18 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-User.destroy_all
+# User.destroy_all
 Market.destroy_all
-Farmer.destroy_all
+# Farmer.destroy_all
 # Item.destroy_all
 
 
-a = Market.create(name: 'Union Square GreenMarket', location: 'New York, NY', website: 'http://www.grownyc.org/greenmarket/manhattan-union-square-m', hours: '6:00AM to Sundown', description: 'With many booths of wonderful foods and sundries, this NYC GreenMarket location is among the largerst in Manhattan. Fresh goods abound; come down and join us!', photo: 'URL HERE')
+a = Market.create(name: 'Union Square GreenMarket', location: 'New York, NY', website: 'http://www.grownyc.org/greenmarket/manhattan-union-square-m', hours: '6:00AM to Sundown', description: 'With many booths of wonderful foods and sundries, this NYC GreenMarket location is among the largerst in Manhattan. Fresh goods abound; come down and join us!', photo: 'http://www.grownyc.org/images/logo.png')
 
 b = Market.create(name: 'Matthews Community Farmers\' Market', location: 'Charlotte, NC', website: 'http://www.matthewsfarmersmarket.com/', hours: '8:00AM to Noon', description: 'There\'s Lots of Great Eating Ahead As Farmers Harvest Cool Weather Crops.
-Keep Us In Your Saturday Routine!', photo: 'URL HERE')
+Keep Us In Your Saturday Routine!', photo: 'http://www.matthewsfarmersmarket.com/publishImages/Index~~element1075.jpg')
 
-c = Market.create(name: 'Friends of Elon Community Church Farmers Market', location: 'Elon, NC', website: 'https://www.facebook.com/Friends-of-Elon-Community-Church-Farmers-Market-146462892085433/', hours: '3:00PM to Sundown', description: 'Come to the market today, taste some of the delicious Jillie\'s Jams, say hi to the farmers at T5-Farms, visit The Grain Factory, sample some cheese, support your local farmers and makers! Today from 3:00 pm til dark, maybe 5ish?', photo: 'URL HERE')
+c = Market.create(name: 'Friends of Elon Community Church Farmers Market', location: 'Elon, NC', website: 'https://www.facebook.com/Friends-of-Elon-Community-Church-Farmers-Market-146462892085433/', hours: '3:00PM to Sundown', description: 'Come to the market today, taste some of the delicious Jillie\'s Jams, say hi to the farmers at T5-Farms, visit The Grain Factory, sample some cheese, support your local farmers and makers! Today from 3:00 pm til dark, maybe 5ish?', photo: 'http://flavoritetomatoes.com.au/wp-content/uploads/new_truss_tomatoes.jpg')
 
 
 
