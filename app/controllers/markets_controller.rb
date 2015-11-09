@@ -7,6 +7,8 @@ class MarketsController < ApplicationController
 	end
 	def show
 		@market = Market.find(params[:id])
+		@farmer = Farmer.all
+
 	end
 	def new
 

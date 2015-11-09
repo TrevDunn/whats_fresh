@@ -12,33 +12,30 @@
 </ul>
 </div>
 <div class="main-section">
-<h2> <%= @market.name %> </h2>
-<p>
-	<%= @market.description %>
-</p>
-
-<div class="main-list">
-	<% @market.farmer.each do |frmr| %>
-	<h3><%= frmr.name %></h3>
-	<div class="info-list">
-		<ul>
-			<li>
-				<%= frmr.email %>
-			</li>
-			<li>
-				<%= frmr.website %>
-			</li>
-		</ul>
-	</div>
+	<h2> <%= @market.name %> </h2>
 	<p>
-		<%= frmr.small_desc%>
+		<%= @market.description %>
 	</p>
-	<% end %>
-</div>
-
-
-
-
+	<div class="main-list">
+		<% @farmer.each do |frmr| %>
+			<% if frmr.market_id == @market.id %>
+			<h3><%= frmr.name %></h3>
+			<div class="farmer-contacts">
+				<ul>
+					<li>
+						<%= frmr.email %>
+					</li>
+					<li>
+						<%= frmr.website %>
+					</li>
+				</ul>
+			</div>
+			<p>
+				<%= frmr.small_desc%>
+			</p>
+			<% end %>
+		<% end %>
+	</div>
 	<div class="bottom-text">
 		<p>
 			Are you a vendor at this market?<br/>
@@ -46,3 +43,8 @@
 		</p>
 	</div>
 </div>
+<footer>
+	<div class="nav-bot">
+		<%= link_to 'Back', markets_path%>
+	</div>
+</footer>
