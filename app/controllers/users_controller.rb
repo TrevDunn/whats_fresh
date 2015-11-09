@@ -7,6 +7,7 @@ class UsersController < ApplicationController
 	end
 	def show
 		@user = User.find(params[:id])
+		@farmer = Farmer.find_by user_id: (params[:id])
 	end
 	def new
 		@user = User.new

@@ -3,6 +3,7 @@ class FarmersController < ApplicationController
 		@farmers = Farmer.all
 	end
 	def show
+		@market = Market.find(params[:market_id])
 		@farmer = Farmer.find(params[:id])
 	end
 	def new
@@ -14,6 +15,7 @@ class FarmersController < ApplicationController
 	def create
 		@farmer = Farmer.new(farmer_params)
 		@farmer.market_id = params[:market_id]
+		@farmer.user_id = current_user.id
 		if @farmer.save
 			redirect_to market_path(@farmer.market)
 		else
@@ -21,12 +23,13 @@ class FarmersController < ApplicationController
 		end
 	end
 	def update
-		id = params[:id]
-		farmer = Farmer.find(id)
+		# id = params[:id]
+		farmer = Farmer.find(params[:farmer_id])
+		farmer.user_id = current_user.id
 		if farmer.update(farmer_params)
-			redirect_to edit_market_farmer_path(market_id)
+			redirect_to "/markets/#{farmer.market_id}/farmers/#{farmer.id}"
 		else
-			redirect_to edit_market_farmer_path(market_id)
+			redirect_to "/markets/#{farmer.market_id}/farmers/#{farmer.id}"
 		end
 	end
 	def destroy
@@ -44,9 +47,8 @@ class FarmersController < ApplicationController
 		:email,
 		:website,
 		:description,
-		:user_match,
+		:user_id,
 		:market_id,
-		:user_match,
 		:photo,
 		:small_desc
 		)

@@ -1,14 +1,14 @@
 <h2>Edit Your Farmer Page</h2>
 
-<% if current_user.farmer_access == true && if current_user.id == @farmer.user_match %>
+<% if current_user.farmer_access == true && current_user.id == @farmer.user_id %>
 	<%= render 'form' %>
 <% else %>
 <p>
-	You need to be a Farmer to have a Farmer page.
+	This Farmer's Page does not belong to you.
 </p>
 <% end %>
 
-<%= link_to 'Delete your Farmer Page', market_farmer_path(farmer),
+<%= link_to 'Delete your Farmer Page', "/markets/#{@farmer.market_id}/farmers/#{@farmer.id}",
 method: :delete,
 data: {confirm: 'Are you sure?!?!'} %>
 <%= link_to 'Back', markets_path %>

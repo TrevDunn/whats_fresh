@@ -14,7 +14,6 @@
 		</ul>
 	</div>
 <% end %>
-<% @farmer.user_match = current_user.id %>
 <p>
 	<%= f.label :name %><br>
 	<%= f.text_field :name %><br/>
@@ -40,7 +39,7 @@
 	<%= f.text_area :description %>
 </p>
 <p>
-	<%= f.submit %>
+	<%= f.submit "Submit" %>
 </p>
 <% end %>
 

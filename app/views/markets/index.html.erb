@@ -2,6 +2,9 @@
 	<% @markets.each do |mrkt| %>
 		<li>
 			<%= link_to "#{mrkt.name}", market_path(mrkt.id) %>
+
+				: <%= mrkt.location %>
+
 		</li>
 	<% end %>
 </ul>

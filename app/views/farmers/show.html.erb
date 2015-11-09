@@ -1,0 +1,25 @@
+<div class="info-bar">
+<ul>
+	<li>
+<%= @market.name %>
+	</li>
+	<li>
+<%= @farmer.email %>
+	</li>
+	<li>
+<%= @farmer.website %>
+	</li>
+</ul>
+</div>
+<img src="<%= @farmer.photo %>"/>
+<div class="main-section">
+	<h2> <%= @farmer.name %> </h2>
+	<p>
+		<%= @market.description %>
+	</p>
+</div>
+<footer>
+	<div class="nav-bot">
+		<%= link_to 'Back', "/markets/#{@market.id}"%>
+	</div>
+</footer>

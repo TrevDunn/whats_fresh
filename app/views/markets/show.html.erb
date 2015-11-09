@@ -19,7 +19,10 @@
 	<div class="main-list">
 		<% @farmer.each do |frmr| %>
 			<% if frmr.market_id == @market.id %>
-			<h3><%= frmr.name %></h3>
+			<div class="headshot-links">
+				<img src="<%= frmr.photo %>">
+				<h3><%= link_to "#{frmr.name}", "/markets/#{@market.id}/farmers/#{frmr.id}" %></h3>
+			</div>
 			<div class="farmer-contacts">
 				<ul>
 					<li>

@@ -4,6 +4,7 @@ Rails.application.routes.draw do
 		resources :favorites
 	end
 
+	post '/markets/:market_id/farmers/:farmer_id/edit' => 'farmers#update'
 	resources :markets do
 		resources :farmers do
 			resources :items
@@ -13,7 +14,6 @@ Rails.application.routes.draw do
 	get '/login' => 'sessions#new'
 	post '/login' => 'sessions#create'
 	get '/logout' => 'sessions#destroy'
-
 	post '/markets/:market_id/farmers/new' => 'farmers#create'
 
 
